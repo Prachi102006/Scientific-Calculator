@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumCalc - Scientific Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-glass">
+            <div class="display">
+                <div class="history" id="history"></div>
+                <div class="current" id="current">0</div>
+            </div>
+            
+            <div class="buttons-grid">
+                <!-- First Row -->
+                <button class="btn function" data-action="clear">AC</button>
+                <button class="btn function" data-action="backspace"><i class="fas fa-backspace"></i></button>
+                <button class="btn function" data-action="memory" data-memory="MC">MC</button>
+                <button class="btn function" data-action="memory" data-memory="MR">MR</button>
+                <button class="btn function" data-action="memory" data-memory="M+">M+</button>
+                <button class="btn function" data-action="memory" data-memory="M-">M-</button>
+                
+                <!-- Second Row -->
+                <button class="btn scientific" data-action="operator" data-operator="sin(">sin</button>
+                <button class="btn scientific" data-action="operator" data-operator="cos(">cos</button>
+                <button class="btn scientific" data-action="operator" data-operator="tan(">tan</button>
+                <button class="btn scientific" data-action="operator" data-operator="^">x<sup>y</sup></button>
+                <button class="btn scientific" data-action="operator" data-operator="√(">√</button>
+                <button class="btn scientific" data-action="operator" data-operator="(">(</button>
+                
+                <!-- Third Row -->
+                <button class="btn scientific" data-action="operator" data-operator="asin(">sin<sup>-1</sup></button>
+                <button class="btn scientific" data-action="operator" data-operator="acos(">cos<sup>-1</sup></button>
+                <button class="btn scientific" data-action="operator" data-operator="atan(">tan<sup>-1</sup></button>
+                <button class="btn scientific" data-action="operator" data-operator="10^">10<sup>x</sup></button>
+                <button class="btn scientific" data-action="operator" data-operator="log(">log</button>
+                <button class="btn scientific" data-action="operator" data-operator=")">)</button>
+                
+                <!-- Fourth Row -->
+                <button class="btn number" data-number="7">7</button>
+                <button class="btn number" data-number="8">8</button>
+                <button class="btn number" data-number="9">9</button>
+                <button class="btn operator" data-action="operator" data-operator="/">÷</button>
+                <button class="btn scientific" data-action="operator" data-operator="ln(">ln</button>
+                <button class="btn scientific" data-action="operator" data-operator="!">n!</button>
+                
+                <!-- Fifth Row -->
+                <button class="btn number" data-number="4">4</button>
+                <button class="btn number" data-number="5">5</button>
+                <button class="btn number" data-number="6">6</button>
+                <button class="btn operator" data-action="operator" data-operator="*">×</button>
+                <button class="btn scientific" data-action="operator" data-operator="π">π</button>
+                <button class="btn scientific" data-action="operator" data-operator="e">e</button>
+                
+                <!-- Sixth Row -->
+                <button class="btn number" data-number="1">1</button>
+                <button class="btn number" data-number="2">2</button>
+                <button class="btn number" data-number="3">3</button>
+                <button class="btn operator" data-action="operator" data-operator="-">-</button>
+                <button class="btn scientific" data-action="operator" data-operator="x²">x²</button>
+                <button class="btn scientific" data-action="operator" data-operator="1/(">1/x</button>
+                
+                <!-- Seventh Row -->
+                <button class="btn number" data-number="0">0</button>
+                <button class="btn number" data-number=".">.</button>
+                <button class="btn equals" data-action="calculate">=</button>
+                <button class="btn operator" data-action="operator" data-operator="+">+</button>
+                <button class="btn scientific" data-action="operator" data-operator="%">%</button>
+                <button class="btn function" data-action="toggle-theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
